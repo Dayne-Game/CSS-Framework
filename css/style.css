@@ -25,11 +25,17 @@ table {
   background: #ffffff;
   width: 100%;
   border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 td,
 th {
   padding: 8px;
+}
+
+tbody {
+  border: .5px solid #f4f4f4;
 }
 
 th {
@@ -43,18 +49,12 @@ th {
 
   color: rgba(107, 114, 128, 1);
   font-size: 14px;
-}
 
-th:first-child {
-  border-top-left-radius: 6px;
-}
-
-th:last-child {
-  border-top-right-radius: 6px;
+  border: .5px solid #f4f4f4;
 }
 
 tr {
-  border-bottom: 0.5px solid #ddd;
+  border-bottom: 0.5px solid #f4f4f4;
 }
 
 td {
@@ -62,6 +62,9 @@ td {
   padding-bottom: 10px;
   font-size: 14px;
 }
+
+tbody, tr:last-child td:first-child { border-bottom-left-radius: 30px; }
+tbody, tr:last-child td:last-child { border-bottom-right-radius: 30px; }
 
 .line-one {
   display: block;
@@ -83,4 +86,20 @@ td {
   object-fit: cover;
 }
 
-/* Side Navigation */
+.role {
+  padding: 2px 8px 2px 8px;
+  border-radius: 25px;
+}
+
+.role.admin {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.card {
+  height: 300px;
+  width: 240px;
+
+  border-radius: 25px;
+  border: 1px solid #333;
+}
